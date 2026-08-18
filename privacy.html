@@ -1,0 +1,468 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Privacy Policy — GlassCutterFragment</title>
+    <meta name="description" content="Privacy policy for GlassCutterFragment, a timed paper-folding puzzle game on iOS and iPadOS.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&family=Syne:wght@700;800&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --paper: #e8f4f2;
+            --ink: #14353a;
+            --muted: #4a6b70;
+            --coral: #ff5c4d;
+            --mint: #2ec4a5;
+            --lemon: #f4c430;
+            --sky: #3aa8d8;
+            --panel: #ffffff;
+            --line: rgba(20, 53, 58, 0.12);
+            --shadow: rgba(20, 53, 58, 0.12);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Outfit', sans-serif;
+            background: var(--paper);
+            background-image:
+                radial-gradient(ellipse 70% 40% at 90% 0%, rgba(58, 168, 216, 0.18), transparent 50%),
+                radial-gradient(ellipse 55% 35% at 5% 30%, rgba(46, 196, 165, 0.16), transparent 50%),
+                linear-gradient(180deg, #eef8f6 0%, #dfeeea 100%);
+            color: var(--ink);
+            min-height: 100vh;
+            line-height: 1.7;
+        }
+
+        .wrap {
+            max-width: 820px;
+            margin: 0 auto;
+            padding: 36px 18px 72px;
+        }
+
+        .nav {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 14px;
+            flex-wrap: wrap;
+            margin-bottom: 32px;
+            padding: 12px 14px;
+            background: var(--panel);
+            border: 1.5px solid var(--line);
+            border-radius: 16px;
+            box-shadow: 0 8px 24px var(--shadow);
+        }
+
+        .brand {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            text-decoration: none;
+            color: var(--ink);
+        }
+
+        .brand img {
+            width: 42px;
+            height: 42px;
+            border-radius: 11px;
+            border: 2px solid #fff;
+            box-shadow: 3px 3px 0 rgba(46, 196, 165, 0.4);
+        }
+
+        .brand strong {
+            font-family: 'Syne', sans-serif;
+            font-size: 1.05rem;
+            font-weight: 800;
+            letter-spacing: -0.02em;
+        }
+
+        .nav .back {
+            font-size: 0.8rem;
+            font-weight: 700;
+            text-decoration: none;
+            color: #fff;
+            background: var(--ink);
+            padding: 9px 14px;
+            border-radius: 10px;
+        }
+
+        .nav .back:hover {
+            background: var(--coral);
+        }
+
+        .intro {
+            margin-bottom: 28px;
+        }
+
+        .intro .label {
+            display: inline-block;
+            font-size: 0.7rem;
+            font-weight: 800;
+            letter-spacing: 0.14em;
+            text-transform: uppercase;
+            color: var(--ink);
+            background: var(--lemon);
+            padding: 5px 10px;
+            border-radius: 6px;
+            margin-bottom: 12px;
+        }
+
+        .intro h1 {
+            font-family: 'Syne', sans-serif;
+            font-size: clamp(1.85rem, 5vw, 2.45rem);
+            font-weight: 800;
+            letter-spacing: -0.03em;
+            line-height: 1.12;
+            margin-bottom: 10px;
+        }
+
+        .intro .meta {
+            color: var(--muted);
+            font-size: 0.95rem;
+            font-weight: 500;
+        }
+
+        .banner {
+            background: linear-gradient(120deg, #14353a, #1f555c);
+            color: #e8f4f2;
+            border-radius: 18px;
+            padding: 22px 22px;
+            margin-bottom: 26px;
+            box-shadow: 0 14px 36px rgba(20, 53, 58, 0.22);
+        }
+
+        .banner p {
+            font-size: 0.96rem;
+            color: rgba(232, 244, 242, 0.9);
+        }
+
+        .banner strong {
+            color: var(--lemon);
+            font-weight: 700;
+        }
+
+        .snapshot {
+            display: grid;
+            gap: 12px;
+            margin-bottom: 30px;
+        }
+
+        @media (min-width: 640px) {
+            .snapshot {
+                grid-template-columns: repeat(3, 1fr);
+            }
+        }
+
+        .snap {
+            background: var(--panel);
+            border: 1.5px solid var(--line);
+            border-radius: 16px;
+            padding: 18px 16px;
+            box-shadow: 0 6px 18px var(--shadow);
+        }
+
+        .snap .dot {
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            margin-bottom: 10px;
+        }
+
+        .snap .dot.coral { background: var(--coral); }
+        .snap .dot.mint { background: var(--mint); }
+        .snap .dot.sky { background: var(--sky); }
+
+        .snap h2 {
+            font-family: 'Syne', sans-serif;
+            font-size: 0.98rem;
+            font-weight: 700;
+            margin-bottom: 6px;
+            letter-spacing: -0.02em;
+        }
+
+        .snap p {
+            color: var(--muted);
+            font-size: 0.88rem;
+            line-height: 1.55;
+        }
+
+        .toc {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-bottom: 28px;
+        }
+
+        .toc a {
+            font-size: 0.75rem;
+            font-weight: 700;
+            text-decoration: none;
+            color: var(--ink);
+            background: var(--panel);
+            border: 1.5px solid var(--line);
+            border-radius: 999px;
+            padding: 7px 12px;
+        }
+
+        .toc a:hover {
+            border-color: var(--mint);
+            background: rgba(46, 196, 165, 0.12);
+        }
+
+        .sections {
+            display: flex;
+            flex-direction: column;
+            gap: 14px;
+        }
+
+        .block {
+            background: var(--panel);
+            border: 1.5px solid var(--line);
+            border-radius: 18px;
+            padding: 22px 22px 20px;
+            box-shadow: 0 8px 22px var(--shadow);
+            scroll-margin-top: 20px;
+        }
+
+        .block header {
+            display: flex;
+            align-items: baseline;
+            gap: 12px;
+            margin-bottom: 12px;
+        }
+
+        .block .num {
+            font-family: 'Syne', sans-serif;
+            font-size: 0.85rem;
+            font-weight: 800;
+            color: var(--coral);
+            letter-spacing: 0.04em;
+        }
+
+        .block h3 {
+            font-family: 'Syne', sans-serif;
+            font-size: 1.15rem;
+            font-weight: 700;
+            letter-spacing: -0.02em;
+        }
+
+        .block p,
+        .block li {
+            color: var(--muted);
+            font-size: 0.95rem;
+        }
+
+        .block p + p {
+            margin-top: 10px;
+        }
+
+        .block ul {
+            margin: 10px 0 0 1.15rem;
+        }
+
+        .block li {
+            margin-bottom: 6px;
+        }
+
+        .block strong {
+            color: var(--ink);
+            font-weight: 650;
+        }
+
+        .foot {
+            margin-top: 32px;
+            text-align: center;
+            color: var(--muted);
+            font-size: 0.9rem;
+        }
+
+        .foot a {
+            color: var(--ink);
+            font-weight: 700;
+            text-decoration: none;
+        }
+
+        .foot a:hover {
+            color: var(--coral);
+        }
+
+        @media (max-width: 600px) {
+            .block { padding: 18px 16px; }
+            .banner { padding: 18px 16px; }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wrap">
+        <nav class="nav">
+            <a class="brand" href="index.html">
+                <img src="icon.png" width="42" height="42" alt="">
+                <strong>GlassCutterFragment</strong>
+            </a>
+            <a class="back" href="index.html">Back to game</a>
+        </nav>
+
+        <header class="intro">
+            <span class="label">Privacy</span>
+            <h1>GlassCutterFragment data practices</h1>
+            <p class="meta">Effective August 18, 2026 · Covers the iOS / iPadOS game GlassCutterFragment</p>
+        </header>
+
+        <div class="banner">
+            <p>This page explains how the free timed folding puzzle <strong>GlassCutterFragment</strong> treats information when you play on Apple devices. It is written for this title only and aligns with the App Store App Privacy labels and the fact that the product <strong>contains advertising</strong>. Apple’s own rules still apply to downloads, billing, and system permissions.</p>
+        </div>
+
+        <div class="snapshot">
+            <div class="snap">
+                <div class="dot coral"></div>
+                <h2>May be used to track</h2>
+                <p>Usage data may be used to track you across apps and sites owned by other companies, as stated on the store listing.</p>
+            </div>
+            <div class="snap">
+                <div class="dot mint"></div>
+                <h2>May be linked to you</h2>
+                <p>Usage data may also be collected in a form that can be linked to your identity for product and ad purposes.</p>
+            </div>
+            <div class="snap">
+                <div class="dot sky"></div>
+                <h2>Age &amp; ads</h2>
+                <p>Rated 4+. The game includes advertising; tracking prompts and iOS settings control what is allowed.</p>
+            </div>
+        </div>
+
+        <div class="toc" aria-label="Section links">
+            <a href="#s1">Publisher</a>
+            <a href="#s2">What we process</a>
+            <a href="#s3">Why</a>
+            <a href="#s4">Ads &amp; ATT</a>
+            <a href="#s5">Sharing</a>
+            <a href="#s6">Retention</a>
+            <a href="#s7">Kids</a>
+            <a href="#s8">Your controls</a>
+            <a href="#s9">Transfers</a>
+            <a href="#s10">Updates</a>
+        </div>
+
+        <div class="sections">
+            <section class="block" id="s1">
+                <header>
+                    <span class="num">01</span>
+                    <h3>Who provides this game</h3>
+                </header>
+                <p><strong>GlassCutterFragment</strong> is the App Store product covered by this notice. On the store it is listed under the seller name associated with the listing. This policy does not apply to unrelated websites, social accounts, or apps you open outside GlassCutterFragment.</p>
+            </section>
+
+            <section class="block" id="s2">
+                <header>
+                    <span class="num">02</span>
+                    <h3>Information the game may handle</h3>
+                </header>
+                <p>According to the published App Privacy details for GlassCutterFragment, categories may include:</p>
+                <ul>
+                    <li><strong>Usage data</strong> — interaction and session signals that help measure play patterns, support the free product model, and enable advertising or measurement when allowed.</li>
+                    <li><strong>On-device gameplay state</strong> — level progress, star ratings, coin balance, boost use, and preference settings stored locally so you can resume challenges on the same device.</li>
+                </ul>
+                <p>GlassCutterFragment does not require a separate in-app account under this notice. Apple ID, purchases, and Family Sharing remain under Apple’s control.</p>
+            </section>
+
+            <section class="block" id="s3">
+                <header>
+                    <span class="num">03</span>
+                    <h3>Why information is used</h3>
+                </header>
+                <p>Where processed, information supports:</p>
+                <ul>
+                    <li>Running core fold-and-timer gameplay and remembering progress on your device</li>
+                    <li>Improving stability and understanding how levels and power-ups perform</li>
+                    <li>Serving and measuring ads that help keep the free download available</li>
+                    <li>Meeting App Store, advertising, and legal requirements</li>
+                </ul>
+            </section>
+
+            <section class="block" id="s4">
+                <header>
+                    <span class="num">04</span>
+                    <h3>Advertising and tracking choices</h3>
+                </header>
+                <p>The store listing states that usage data may be used for tracking and may be linked to you. When Apple’s App Tracking Transparency framework applies, you can allow or deny tracking. You can also adjust related options in iOS Settings.</p>
+                <p>Limiting tracking can change which ads appear, but it does not remove advertising entirely from a free title that discloses ads on the App Store.</p>
+            </section>
+
+            <section class="block" id="s5">
+                <header>
+                    <span class="num">05</span>
+                    <h3>Apple platforms and other processors</h3>
+                </header>
+                <p><strong>Apple</strong> handles install, update, and payment events under Apple’s privacy policy. Depending on the build, the game may also rely on:</p>
+                <ul>
+                    <li>Apple store and device services</li>
+                    <li>Advertising or analytics providers embedded in the app, when active</li>
+                </ul>
+                <p>We do not sell contact address books. Partner categories can change with updates; the App Privacy section on the GlassCutterFragment store page remains the fastest public summary.</p>
+            </section>
+
+            <section class="block" id="s6">
+                <header>
+                    <span class="num">06</span>
+                    <h3>How long information stays</h3>
+                </header>
+                <p>Local progress and settings usually stay on your device until you delete the app or clear its data. Usage or advertising records held by service providers are kept only as long as needed for operation, measurement, fraud prevention, or law, then deleted or aggregated.</p>
+            </section>
+
+            <section class="block" id="s7">
+                <header>
+                    <span class="num">07</span>
+                    <h3>Children and age rating</h3>
+                </header>
+                <p>GlassCutterFragment is rated <strong>4+</strong> and includes a simple age-gate style setup described on the store. It is not designed to request personal profiles from children beyond what the advertising disclosures describe. Guardians should use Apple Screen Time, purchase limits, and tracking controls to supervise play.</p>
+            </section>
+
+            <section class="block" id="s8">
+                <header>
+                    <span class="num">08</span>
+                    <h3>Your choices and requests</h3>
+                </header>
+                <p>You can:</p>
+                <ul>
+                    <li>Respond to ATT prompts and change tracking settings on the device</li>
+                    <li>Delete the app to remove locally stored fold progress and coins</li>
+                    <li>Manage Apple ID billing and Family Sharing through Apple</li>
+                </ul>
+                <p>For product privacy questions about GlassCutterFragment, use the support contact shown on the App Store listing for this title. Do not send passwords or payment card numbers through any support form.</p>
+            </section>
+
+            <section class="block" id="s9">
+                <header>
+                    <span class="num">09</span>
+                    <h3>International processing</h3>
+                </header>
+                <p>Apple and advertising infrastructure may process data in countries other than where you live. When that happens, those providers’ contractual and legal safeguards for App Store software apply.</p>
+            </section>
+
+            <section class="block" id="s10">
+                <header>
+                    <span class="num">10</span>
+                    <h3>Changes to this policy</h3>
+                </header>
+                <p>If GlassCutterFragment’s features, SDKs, or App Privacy labels change, this page may be revised and the effective date updated. For the latest store-facing summary, open the GlassCutterFragment App Store page and review App Privacy.</p>
+            </section>
+        </div>
+
+        <p class="foot">
+            <a href="index.html">GlassCutterFragment home</a>
+            &nbsp;·&nbsp;
+            <a href="https://apps.apple.com/us/app/glasscutterfragment/id6801442749?uo=4" target="_blank" rel="noopener noreferrer">App Store</a>
+        </p>
+    </div>
+</body>
+
+</html>
